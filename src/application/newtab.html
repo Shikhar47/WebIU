@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Homepage</title>
+
+<style type="text/css">
+
+	
+	@import url("file:///C:/Users/Shikhar/workspaceFX/Browser/font/foundation-icons.css");
+	@import url("file:///C:/Users/Shikhar/workspaceFX/Browser/font/zocial.css");
+	
+	.googlelogo{display:inline;}
+	.yahoologo{display:none;}
+	.binglogo{display:none;}
+	.wikipedialogo{display:none;}
+	
+</style>
+
+<link rel="stylesheet" href="file:///C:/Users/Shikhar/workspaceFX/Browser/src/application/newtab.css">
+
+<script type="text/javascript">
+	var url = "https://www.google.co.in/?gfe_rd=cr&ei=-JQaVtqiNc6xogOJ7J-gDg#q=";
+	var searchQ = "";
+	
+	function check(searchQ)
+	{
+		this.searchQ = searchQ;
+		if(searchQ == "googlelogo")
+		{
+			url = "https://www.google.co.in/?gfe_rd=cr&ei=-JQaVtqiNc6xogOJ7J-gDg#q=";
+			document.getElementById("googlelogo").style.display = 'inline';
+			document.getElementById("yahoologo").style.display = 'none';
+			document.getElementById("binglogo").style.display = 'none';
+			document.getElementById("wikipedialogo").style.display = 'none';
+		}
+		else if(searchQ == "yahoologo")
+		{
+			url = "https://in.search.yahoo.com/search?p=";
+			document.getElementById("googlelogo").style.display = 'none';
+			document.getElementById("yahoologo").style.display = 'inline';
+			document.getElementById("binglogo").style.display = 'none';
+			document.getElementById("wikipedialogo").style.display = 'none';
+		}
+		else if(searchQ == "binglogo")
+		{
+			url = "http://www.bing.com/search?q=";
+			document.getElementById("googlelogo").style.display = 'none';
+			document.getElementById("yahoologo").style.display = 'none';
+			document.getElementById("binglogo").style.display = 'inline';
+			document.getElementById("wikipedialogo").style.display = 'none';
+		}
+		else
+		{
+			url = "https://en.wikipedia.org/wiki/";
+			document.getElementById("googlelogo").style.display = 'none';
+			document.getElementById("yahoologo").style.display = 'none';
+			document.getElementById("binglogo").style.display = 'none';
+			document.getElementById("wikipedialogo").style.display = 'inline';
+			
+		}
+	}
+	
+	function search()
+	{
+		var q = document.getElementById("searchBox").value;
+		document.getElementById("SubmitForm").action = url + q;
+		document.getElementById("SubmitForm").submit();
+	}
+	
+</script>
+
+</head>
+
+<body onload="imageChanger();" id="home_page">
+	<nav>
+		<ul>
+			<li><a href="https://www.facebook.com"><span class="zocial-facebook"></span></a></li>
+			<li><a href="https://www.youtube.com"><span class="zocial-youtube"></span></a></li>
+			<li><a href="https://www.twitter.com"><span class="zocial-twitter"></span></a></li>
+			<li><a href="https://www.plus.google.com"><span class="zocial-googleplus"></span></a></li>
+			<li><a href="https://www.linkedin.com"><span class="zocial-linkedin"></span></a></li>
+			<li><a href="https://www.gmail.com"><span class="zocial-gmail"></span></a></li>			
+			<li><a href="https://www.skype.com"><span class="zocial-skype"></span></a></li>
+		</ul>
+	</nav>
+	
+	<div class="searchOptions">
+		<ul>
+			<li class="zocial-google-li" onclick="check('googlelogo')"><a href="#"><span class="zocial-google"></span></a></li>
+			<li class="zocial-yahoo-li" onclick="check('yahoologo')"><a href="#"><span class="zocial-yahoo"></span></a></li>
+			<li class="zocial-bing-li" onclick="check('binglogo')"><a href="#"><i class="fi-social-bing"></i></a></li>
+			<li class="zocial-wikipedia-li" onclick="check('wikipedialogo')"><a href="#"><span class="zocial-wikipedia"></span></a></li>
+		</ul>
+	</div>
+	
+	<div class="searchBox">
+		<img class="googlelogo" id="googlelogo" src="file:///C:/Users/Shikhar/workspaceFX/Browser/images/googlelogo.png" width="270" height="90">
+		<img class="yahoologo" id="yahoologo" src="file:///C:/Users/Shikhar/workspaceFX/Browser/images/yahoologo.png" width="300" height="115">
+		<img class="binglogo" id="binglogo" src="file:///C:/Users/Shikhar/workspaceFX/Browser/images/binglogo.png" width="270" height="90">
+		<img class="wikipedialogo" id="wikipedialogo" src="file:///C:/Users/Shikhar/workspaceFX/Browser/images/wikipedialogo.png" width="280" height="200">
+		<form name="SearchForm" id ="SubmitForm" >
+			<input type="text" id="searchBox" placeholder="Enter search query here" />
+			<input type="submit" value="Search" onclick="search()">
+		</form>
+	</div>
+</body>
+</html>

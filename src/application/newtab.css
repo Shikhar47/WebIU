@@ -1,0 +1,177 @@
+@CHARSET "ISO-8859-1";
+
+[class*="zocial-"]:before {
+  font-family: 'Zocial', sans-serif;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	background:url("file:///C:/Users/Shikhar/workspaceFX/Browser/images/backgrounds/6.jpg");
+}
+
+a { text-decoration: none; }
+ul{list-style-type:none;}
+
+nav {
+	position:absolute;
+	top:0px;
+	right:15px;
+	width: 50px;
+}
+
+nav ul {
+	border-radius: 5px;
+	display: block;
+	background-color: #6daeb0;
+	margin-top: 20px;
+	padding: 5px 0;
+	position: absolute;
+}	
+
+nav ul:before {
+	background-color: #6daeb0;
+	content: "";
+	display: block;
+	height: 8px;
+	width: 8px;
+	left: 21px;
+	position: absolute;
+	top: -4px;
+	-webkit-transform: rotate(45deg);
+	z-index: -1;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	color: #fff;
+	display: block;
+	height: 45px;
+	width:50px;
+	line-height: 45px;
+	text-align: center;
+}
+
+nav ul li a:hover {
+	background-color: #0f8f8f;
+}
+
+.searchOptions ul {
+	border-radius: 5px;
+	display: inline;
+	margin-top: 0px;
+	font-size:23px;
+	position: absolute;
+	left:-60px
+}
+
+.searchOptions ul li {
+	float: left;
+	width:43px;
+	height:33px;
+	padding-top:7px;
+	text-align: center;
+	margin-left: 40px;
+	border:2px solid #34495e;
+	border-radius:50%;
+	background-color:transparent;
+}
+
+.searchOptions ul li a {
+	padding:9px 4px 8px 4px;
+}
+
+/*--- google -----*/
+.searchOptions ul .zocial-google-li {
+	background-color: #dc4e41;
+	box-shadow:1px 1px 5px #999;
+}
+.searchOptions ul li .zocial-google{
+	color:#85bf25;
+}
+
+.searchOptions ul .zocial-google-li:hover {
+	background-color: #f4b400;
+	border-color: #f4b400;
+	box-shadow:2px 2px 9px #666666;
+}
+.searchOptions ul li .zocial-google:hover{
+	color:#4285f4;
+}
+
+/*--- yahoo --*/
+.searchOptions ul .zocial-yahoo-li {
+	background-color: white;
+	box-shadow:1px 1px 5px #999;
+}
+.searchOptions ul li .zocial-yahoo {
+	color:#400191;
+}
+
+.searchOptions ul .zocial-yahoo-li:hover {
+	background-color: #400191;
+	border-color: #400191;
+	box-shadow:2px 2px 9px #666666;
+}
+.searchOptions ul li .zocial-yahoo:hover{
+	color:white;
+}
+
+/*---- bing -----*/
+.searchOptions ul .zocial-bing-li {
+	background-color: #F2B50F;
+	box-shadow:1px 1px 5px #999;
+}
+.searchOptions ul li .fi-social-bing{
+	color:white;
+}
+
+.searchOptions ul .zocial-bing-li:hover {
+	background-color: #838383;
+	border-color: #838383;
+	box-shadow:2px 2px 9px #666666;
+}
+.searchOptions ul li .fi-social-bing:hover{
+	color:black;
+}
+
+/*--- wikipedia ---*/
+.searchOptions ul .zocial-wikipedia-li {
+	background-color: #f8f8f8;
+	box-shadow:1px 1px 5px #999;
+}
+.searchOptions ul li .zocial-wikipedia {
+	color:black;
+}
+
+.searchOptions ul .zocial-wikipedia-li:hover {
+	background-color: #3f3f3f;
+	border-color: #3f3f3f;
+	box-shadow:2px 2px 9px #666666;
+}
+.searchOptions ul li .zocial-wikipedia:hover{
+	color:white;
+}
+
+.searchBox{width:56%; height:36%; position:absolute; top:25%; left:24%; z-index:100}
+
+.googlelogo{margin:5px 0px 0px 220px;}
+.yahoologo{margin:-30px 0px 20px 220px; width:290px; height:105px;}
+.binglogo{margin:5px 0px 0px 220px;}
+.wikipedialogo{margin:-45px 0px -60px 220px;}
+
+.searchBox input[type="text"]{
+				display:inline-block; margin:0px 0px 0px 80px; width:68%; height:24px;
+				padding:4px;
+				}
+.searchBox input[type="submit"]{
+				position:absolute;
+				float:right;
+				margin:0px 0px 0px -1px;
+				width:65px;
+				height:35px;
+				}
